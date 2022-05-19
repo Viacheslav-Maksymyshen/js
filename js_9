@@ -1,0 +1,38 @@
+// function getExtremeElements(array) {
+//   // Change code below this line
+
+//   const lastElement = array[array.length - 1];
+//   const FirstElement = array[0];
+//   array = [FirstElement, lastElement];
+//   console.log(array);
+
+//   // Change code above this line
+// }
+// getExtremeElements([1, 2, 3, 4, 5]);
+// getExtremeElements(["Earth", "Mars", "Venus"]);
+// getExtremeElements(["apple", "peach", "pear", "banana"]);
+
+// function splitMessage(message, delimeter) {
+//   let words;
+//   // Change code below this line
+//   words = message.split(delimeter);
+//   // Change code above this line
+//   console.log(words);
+// }
+// splitMessage('Mango hurries to the train', ' '); //["Mango", "hurries", "to", "the", "train"]
+// splitMessage('Mango', ''); //["M", "a", "n", "g", "o"]
+// splitMessage('best_for_week', '_'); // ["best", "for", "week"]
+
+function calculateEngravingPrice(message, pricePerWord) {
+  // Change code below this line
+  let splitWord = message.split(' ');
+  let calcWord = splitWord.length * pricePerWord;
+  return calcWord;
+
+  // Change code above this line
+}
+
+calculateEngravingPrice('JavaScript is in my blood', 10); //50
+calculateEngravingPrice('JavaScript is in my blood', 20); //100
+calculateEngravingPrice('Web-development is creative work', 40); //160
+calculateEngravingPrice('Web-development is creative work', 20); //80
