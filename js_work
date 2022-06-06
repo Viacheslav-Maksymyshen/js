@@ -1,0 +1,196 @@
+// function getExtremeElements(array) {
+//   // Change code below this line
+
+//   const lastElement = array[array.length - 1];
+//   const FirstElement = array[0];
+//   array = [FirstElement, lastElement];
+//   console.log(array);
+
+//   // Change code above this line
+// }
+// getExtremeElements([1, 2, 3, 4, 5]);
+// getExtremeElements(["Earth", "Mars", "Venus"]);
+// getExtremeElements(["apple", "peach", "pear", "banana"]);
+//===================================================================================================================================
+// function splitMessage(message, delimeter) {
+//   let words;
+//   // Change code below this line
+//   words = message.split(delimeter);
+//   // Change code above this line
+//   console.log(words);
+// }
+// splitMessage('Mango hurries to the train', ' '); //["Mango", "hurries", "to", "the", "train"]
+// splitMessage('Mango', ''); //["M", "a", "n", "g", "o"]
+// splitMessage('best_for_week', '_'); // ["best", "for", "week"]
+//===================================================================================================================================
+// function calculateEngravingPrice(message, pricePerWord) {
+//   // Change code below this line
+//   let splitWord = message.split(' ');
+//   let calcWord = splitWord.length * pricePerWord;
+//   return calcWord;
+
+//   // Change code above this line
+// }
+
+// calculateEngravingPrice('JavaScript is in my blood', 10); //50
+// calculateEngravingPrice('JavaScript is in my blood', 20); //100
+// calculateEngravingPrice('Web-development is creative work', 40); //160
+// calculateEngravingPrice('Web-development is creative work', 20); //80
+//=====================================================================================================================================
+// function slugify(title) {
+//   // Change code below this line
+
+//   let titleRegister = title.toLowerCase();
+//   let titleSeparator = titleRegister.split(' ');
+//   let slug = titleSeparator.join('-');
+//   console.log(slug);
+
+//   // Change code above this line
+// }
+
+// slugify('Arrays for begginers'); //"arrays-for-begginers"
+// slugify('English for developer'); //"english-for-developer"
+// slugify('Ten secrets of JavaScript'); //"ten-secrets-of-javascript"
+// slugify('How to become a JUNIOR developer in TWO WEEKS'); //"how-to-become-a-junior-developer-in-two-weeks"
+//====================================================================================================================================
+// function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+//   let array = firstArray.concat(secondArray);
+//   let newArray = array.slice(0, maxLength);
+//   console.log(newArray);
+
+//   // Change code above this line
+// }
+
+// makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3); // ["Mango", "Poly", "Ajax"]
+// makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4); // ["Mango", "Poly", "Houston", "Ajax"]
+// makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3); // ["Mango", "Ajax", "Chelsea"]
+// makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2); // ["Earth", "Jupiter"]
+// makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4); // ["Earth", "Jupiter", "Neptune", "Uranus"]
+// makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0); // []
+//======================================================================================================================================
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) {
+//   // Change this line
+//   console.log(i);
+// }
+//======================================================================================================================================
+
+// function calculateTotal(number) {
+//   // Change code below this line
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   console.log(sum);
+//   // Change code above this line
+// }
+// calculateTotal(1);
+// calculateTotal(3);
+// calculateTotal(7);
+// calculateTotal(18);
+// calculateTotal(24);
+
+//======================================================================================================================================
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) {
+//   // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+//=======================================================================================================================================
+
+// function solution(number) {
+//   let sum = 0;
+//   for (let i = 0; i < number; i += 1) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return;
+// }
+// solution(10);
+//========================================================================================================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   {
+//     name: 'Grip',
+//     price: 1200,
+//     quantity: 9,
+//   },
+// ];
+
+// function getProductPrice(productName) {
+//   let productPrice = null;
+
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       productPrice = product.price;
+//     }
+//   }
+
+//   console.log(productPrice);
+//   return productPrice;
+// }
+
+// getProductPrice('Scanner');
+// getProductPrice('Droid');
+// getProductPrice('Engine');
+// getProductPrice('Grip');
+// getProductPrice('Radar');
+//==========================================================================================================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const produktValue = [];
+//   for (const product of products) {
+//     if (product[propName]) {
+//       produktValue.push(product[propName]);
+//     }
+//   }
+
+//   console.log(produktValue);
+//   return produktValue;
+//   // Change code above this line
+// }
+// getAllPropValues('name'); // ["Radar", "Scanner", "Droid", "Grip"]
+// getAllPropValues('quantity'); // [4, 3, 7, 9]
+// getAllPropValues('price'); // [1300, 2700, 400, 1200]
+// getAllPropValues('category');
+//=======================================================================================================================================
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   let totalPrice = 0;
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       totalPrice += product.price * product.quantity;
+//     }
+//   }
+//   console.log(totalPrice);
+//   return totalPrice;
+//   // Change code above this line
+// }
+// calculateTotalPrice('Blaster'); // 0
+// calculateTotalPrice('Radar'); // 5200
+// calculateTotalPrice('Droid'); // 2800
+// calculateTotalPrice('Grip'); // 10800
+// calculateTotalPrice('Scanner'); // 8100
+//==========================================================================================================================================
