@@ -185,3 +185,183 @@
 // apartment.location.country = 'Jamaica';
 // apartment.location.city = 'Kingston';
 //==================================================================================================================
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//   //console.log(firstNumber); // Значення першого аргументу
+//   //console.log(secondNumber); // Значення другого аргументу
+//   //console.log(otherArgs); // Масив інших аргументів
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+//=====================================================================================================================
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'На березі спокійних вод',
+//     author: 'Роберт Шеклі',
+//     rating: 8.51,
+//   },
+// ];
+// for (const { title, author, rating } of books) {
+//   console.log(title);
+//   console.log(author);
+//   console.log(rating);
+// }
+//=================================================================================================
+// function makeTask(data) {
+//   // Change code below this line
+
+//   const { text, category = 'General', priority = 'Normal', completed = false } = data;
+//   return (vasya = {
+//     text,
+//     category,
+//     priority,
+//     completed,
+//   });
+
+//   // Change code above this line
+// }
+
+// console.log(makeTask({ category: 'Homemade', priority: 'Low', text: 'Take out the trash' })); // { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+//=====================================================================================================
+// function compare(firstNumber = 0, secondNumber = 0, operation = '+', result = 0) {
+//   const num1 = Number(firstNumber);
+//   const num2 = Number(secondNumber);
+//   const res = Number(result);
+
+//   const operationsDic = {
+//     '+': function (a, b) {
+//       return a + b;
+//     },
+//     '-': function (a, b) {
+//       return a - b;
+//     },
+//     '*': function (a, b) {
+//       return a * b;
+//     },
+//     '/': function (a, b) {
+//       return a / b;
+//     },
+//   };
+
+//   if (operation in operationsDic === false) return 'Error';
+//   if (isNaN(num1) || isNaN(num2) || isNaN(res)) return 'Error';
+
+//   const operationResult = operationsDic[operation](num1, num2);
+
+//   return operationResult === res;
+//   // 4 === 4
+// }
+
+// const res = compare('2', '2', '*', '4');
+// console.log(res);
+//==========================================================================================
+// Change code below this line
+// function add(...args) {
+//   let sum = 0;
+//   for (const arg of args) {
+//     sum += arg;
+//   }
+
+//   return sum;
+//   // Change code above this line
+// }
+// add(74, 11, 62, 46, 12, 36); //241
+// add(32, 6, 13, 19, 8); //78
+//===========================================================================================
+// Change code below this line
+// function findMatches(args1, ...args2) {
+//   // console.log(args1);
+//   // console.log(args2);
+//   const matches = []; // Don't change this line
+//   for (const arg1 of args1) {
+//     if (args2.includes(arg1)) {
+//       matches.push(arg1);
+//     }
+//   }
+
+//   // Change code above this line
+//   console.log(matches);
+//   return matches;
+// }
+
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7); // [1, 2]
+// findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2); // [17, 89, 2]
+// findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41); // [24, 9, 41]
+// findMatches([63, 11, 8, 29], 4, 7, 16); // []
+//================================================================================================
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const bookIndex = this.books.indexOf(oldName);
+//     this.books.splice(bookIndex, 1, newName);
+
+//     // Change code above this line
+//   },
+// };
+
+// bookShelf.updateBook('Haze', 'Dungeon chronicles');
+// console.log(bookShelf.books);
+//================================================================================================
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   addPotion(potionName) {
+//     // Change code below this line
+
+//     this.potions.push(potionName);
+
+//     // Change code above this line
+//   },
+// };
+//=================================================================================================
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//   order(pizzaName, onSuccess, onError) {
+//     for (const pizza of this.pizzas) {
+//       if (pizza === pizzaName) {
+//         return onSuccess(pizzaName);
+//       }
+//     }
+//     return onError(pizzaName);
+//   },
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! There is no pizza with a name ${error} in the assortment.`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order('Smoked', makePizza, onOrderError);
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+//==================================================================================================
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+//   orderedItems.forEach(function (Items) {
+//     totalPrice += Items;
+//   });
+
+//   // for (let i = 0; i < orderedItems.length; i += 1) {
+//   //   totalPrice += orderedItems[i];
+//   //}
+
+//   // Change code above this line
+//   console.log(totalPrice);
+//   return totalPrice;
+// }
+// calculateTotalPrice([164, 48, 291]); // 503
