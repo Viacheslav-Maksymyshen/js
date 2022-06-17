@@ -194,3 +194,17 @@
 // calculateTotalPrice('Grip'); // 10800
 // calculateTotalPrice('Scanner'); // 8100
 //==========================================================================================================================================
+// const changeEven = (numbers, value) => {
+//   // Change code below this line
+//   const newArr = [];
+//   numbers.forEach(items => {
+//     items % 2 === 0 ? newArr.push(items + value) : newArr.push(items);
+//       });
+//   return newArr;
+//   // Change code above this line
+// }
+
+// const r1 = changeEven([2, 8, 3, 7, 4, 6], 10); //[12, 18, 3, 7, 14, 16]
+// console.log(r1);
+//======================================================================================================================================
+
