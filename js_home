@@ -844,3 +844,51 @@
 // console.log(mango.isBlacklisted('mango@mail.com')); // false
 // console.log(mango.isBlacklisted('poly@mail.com')); // true
 //========================================================================
+
+// function findUniq(arr) {
+//   const uniqueCourses = arr.filter((course, index, array) => array.indexOf(course) === index);
+//   console.log('🚀 ~ file: js_home ~ line 850 ~ findUniq ~ uniqueCourses', uniqueCourses);
+//   const repetition = arr.filter((course, index, array) => array.indexOf(course) !== index);
+//   console.log('🚀 ~ file: js_home ~ line 852 ~ findUniq ~ repetition', repetition);
+
+//   let res = uniqueCourses.indexOf(...repetition);
+//   if (res !== -1) {
+//     uniqueCourses.splice(res, 1);
+//   }
+//   return uniqueCourses.join();
+// }
+
+// let ar1 = findUniq([1, 0, 0]);
+// console.log('🚀 ~ file: js_home ~ line 859 ~ ar1', ar1);
+// let ar2 = findUniq([0, 1, 0]);
+// console.log('🚀 ~ file: js_home ~ line 861 ~ ar2', ar2);
+// let ar3 = findUniq([0, 0, 1]);
+// console.log('🚀 ~ file: js_home ~ line 863 ~ ar3', ar3);
+// let ar4 = findUniq([3, 10, 3, 3, 3]);
+// console.log('🚀 ~ file: js_home ~ line 865 ~ ar4', ar4);
+
+function toCamelCase(str) {
+  console.log(str.replace(/\W/g, ' '));
+}
+
+toCamelCase('the_stealth_warrior');
+
+const infinteScroll = () => {
+  const lastCard = document.querySelector('.photo-card:last-child');
+  if (lastCard) {
+    infinteObserver.observe(lastCard);
+  }
+};
+
+const infinteObserver = new IntersectionObserver(
+  ([entry], observer) => {
+    // перевірка останього елемента
+    if (entry.isIntersecting) {
+      // перестаємо його відслідковувати
+      observer.unobserve(entry.target);
+      // Завантажуємо нову порцію контенту
+      LoadMorePhoto();
+    }
+  },
+  { threshold: 0.5 },
+);
